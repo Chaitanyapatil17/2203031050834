@@ -1,0 +1,13 @@
+{
+  "name": "logging-middleware",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Reusable logging middleware for Afford Medical Technologies Private Limited",
+  "main": "src/loggingMiddleware.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.10.0"
+  }
+}
