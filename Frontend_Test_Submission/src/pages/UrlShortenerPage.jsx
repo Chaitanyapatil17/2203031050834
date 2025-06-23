@@ -3,9 +3,9 @@ import UrlShortenerForm from "../components/UrlShortenerForm.jsx"
 
 export default function UrlShortenerPage() {
   return (
-    <div>
+        <div>
       <h1>Shorten Your URL</h1>
       <UrlShortenerForm />
-    </div>
+       </div>
   );
 }

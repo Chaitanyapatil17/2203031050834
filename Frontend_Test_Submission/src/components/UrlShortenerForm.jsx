@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { createShortUrl } from "../services/apiService.js";
 
 export default function UrlShortenerForm({ onShorten }) {
-  const [url, setUrl] = useState('');
-  const [validity, setValidity] = useState(30);
+     const [url, setUrl] = useState('');
+    const [validity, setValidity] = useState(30);
   const [shortcode, setShortcode] = useState('');
   const [error, setError] = useState('');
   const [shortLink, setShortLink] = useState('');
@@ -26,7 +26,6 @@ export default function UrlShortenerForm({ onShorten }) {
       <input value={shortcode} onChange={(e) => setShortcode(e.target.value)} placeholder="Custom Shortcode" />
       <button type="submit">Shorten</button>
       {error && <p style={{ color: 'red' }}>{error}</p>}
-      {shortLink && <p>Short Link: <a href={shortLink}>{shortLink}</a></p>}
-    </form>
+      {shortLink && <p>Short Link: <a href={shortLink}>{shortLink}</a></p>}</form>
   );
 }

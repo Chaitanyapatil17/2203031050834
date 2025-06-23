@@ -4,7 +4,6 @@ import { isValidURL, isValidShortcode, generateUniqueShortcode } from '../utils/
 
 const router = express.Router();
 
-// POST /shorturls
 router.post('/', async (req, res) => {
   const { url, validity, shortcode } = req.body;
 
@@ -33,7 +32,7 @@ router.post('/', async (req, res) => {
       expiry,
     });
 
-    res.status(201).json({
+      res.status(201).json({
       shortLink: `http://localhost:5000/shorturls/${shortUrl.shortcode}`,
       expiry: shortUrl.expiry.toISOString()
     });
@@ -41,12 +40,12 @@ router.post('/', async (req, res) => {
     if (err.code === 11000) {
       return res.status(409).json({ error: 'Shortcode already exists' });
     }
-    res.status(500).json({ error: 'Internal Server Error' });
+       res.status(500).json({ error: 'Internal Server Error' });
   }
 });
 
-// GET /shorturls/:shortcode
-router.get('/:shortcode', async (req, res) => {
+
+  router.get('/:shortcode', async (req, res) => {
   const { shortcode } = req.params;
 
   try {
@@ -69,7 +68,6 @@ router.get('/:shortcode', async (req, res) => {
   }
 });
 
-// GET /shorturls/stats/:shortcode
 router.get('/stats/:shortcode', async (req, res) => {
   const { shortcode } = req.params;
 

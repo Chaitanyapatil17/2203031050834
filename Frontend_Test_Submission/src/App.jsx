@@ -12,18 +12,11 @@ function App() {
         {/* Optional Header with Navigation */}
         <Header />
 
-        {/* Define Routes */}
+        
         <Routes>
-          {/* Redirect root to shortener page */}
           <Route path="/" element={<Navigate to="/shorten" replace />} />
-
-          {/* Shorten URL Page */}
           <Route path="/shorten" element={<UrlShortenerPage />} />
-
-          {/* Stats Page with Dynamic Route */}
           <Route path="/stats/:shortcode" element={<UrlStatsPage />} />
-
-          {/* Fallback for Unknown Routes */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

@@ -7,8 +7,8 @@ export default function UrlStatsPage() {
   const [stats, setStats] = useState(null);
   const [error, setError] = useState('');
 
-  useEffect(() => {
-    const fetchStats = async () => {
+       useEffect(() => {
+          const fetchStats = async () => {
       try {
         const data = await getShortUrlStats(shortcode);
         setStats(data);
